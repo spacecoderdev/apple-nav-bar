@@ -1,5 +1,5 @@
 const navButton = document.querySelector('.nav-button');
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('#nav');
 
 navButton.addEventListener('click', () => {
     const visibility = navButton.getAttribute('aria-expanded');
