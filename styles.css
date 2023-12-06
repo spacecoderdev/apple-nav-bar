@@ -1,0 +1,89 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "San Francisco"; /* Due to copyright restrictions, I'm unable to share the folder containing this typography. Please refer to the read.me file for instructions on downloading the typography directly from the original source. */
+    src: url("/Fonts/SF-Pro-Text-Semibold.otf"); 
+    font-weight: 600;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav-button {
+    display: none; /* For larger screens, we prefer not to display the hamburger button. */
+}
+
+@media (max-width: 50rem) {
+
+    /* TOP BUTTON AREA */
+
+    .button-container {
+        position: fixed;
+        width: 100%;
+        height: 4.85rem;
+        background: #161617;
+        z-index: 1;
+    }
+
+    .nav-button {
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 0;
+        background: transparent;
+        display: flex; /* Remember: screens larger than 50rem we set this property to "none" */
+        flex-direction: column;
+        gap: 0.93rem;
+    }
+
+    .nav-button div {
+        background: #E8E8ED;
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+
+    .nav-button[aria-expanded='true'] div:nth-child(1) { /* The aria-expanded attribut located in our toggle buttons serve us to identify if the nav is displayed or not. When displayed, rotate line to create the X */
+        transform: rotate(45deg);
+    }
+
+    .nav-button[aria-expanded='true'] div:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    /* MENU - NAV AREA */
+
+    .nav {
+        position: fixed;
+        inset: 0 0 0 0; /* inset allows you to set top, right, bottom, and left properties simultaneously.  */
+        background: #161617;
+        margin-top: 4.85rem;
+        list-style: none;
+        opacity: 0;
+        transform: translateY(-120%);
+        transition: all 500ms ease-out;
+    }
+
+    .nav a {
+        padding: 0.65rem 3rem;
+        display: block; /* By setting the display to block, we modify the default inline property, ensuring that the clickable area spans the entire width for each <a> */
+        text-decoration: none;
+        font-family: "San Francisco";
+        color: #E8E8ED;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    .nav[data-visible="true"] { /* The data-visible attribute within our <ul> allows us to determine the visibility status of the navigation. When set to true, the navigation is brought down from the top and displayed on our screen.  */
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
