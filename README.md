@@ -1,6 +1,10 @@
 # Apple Store Navigation Bar
 
 Este proyecto de HTML, CSS y JAVASCRIPT tiene como objetivo recrear el diseño de la nav bar de la Apple Store.
+
+Página web de estudio: [https://www.apple.com/es/store](https://www.apple.com/es/)
+San Francisco Font: https://developer.apple.com/fonts/
+
 ## 📸 Screenshots
 
 ![49-readme-image](https://github.com/spacecoderdev/apple-nav-bar/assets/146677344/c9442849-66e6-43a3-980f-dc9c525837f8)
