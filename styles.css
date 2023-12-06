@@ -61,7 +61,7 @@ body {
 
     /* MENU - NAV AREA */
 
-    .nav {
+    #nav {
         position: fixed;
         inset: 0 0 0 0; /* inset allows you to set top, right, bottom, and left properties simultaneously.  */
         background: #161617;
@@ -72,7 +72,7 @@ body {
         transition: all 500ms ease-out;
     }
 
-    .nav a {
+    #nav a {
         padding: 0.65rem 3rem;
         display: block; /* By setting the display to block, we modify the default inline property, ensuring that the clickable area spans the entire width for each <a> */
         text-decoration: none;
@@ -82,7 +82,7 @@ body {
         font-weight: 600;
     }
 
-    .nav[data-visible="true"] { /* The data-visible attribute within our <ul> allows us to determine the visibility status of the navigation. When set to true, the navigation is brought down from the top and displayed on our screen.  */
+    #nav[data-visible="true"] { /* The data-visible attribute within our <ul> allows us to determine the visibility status of the navigation. When set to true, the navigation is brought down from the top and displayed on our screen.  */
         transform: translateY(0%);
         opacity: 1;
     }
